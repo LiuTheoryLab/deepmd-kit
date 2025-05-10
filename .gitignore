@@ -50,3 +50,5 @@ uv.lock
 buildcxx/
 node_modules/
 *.bib.original
+
+examples/polaron/database_*
