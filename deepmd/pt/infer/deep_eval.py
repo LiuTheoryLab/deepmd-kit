@@ -40,6 +40,9 @@ from deepmd.infer.deep_property import (
 from deepmd.infer.deep_wfc import (
     DeepWFC,
 )
+from deepmd.infer.deep_polaron import (
+    DeepPolaron,
+)
 from deepmd.pt.model.model import (
     get_model,
 )
@@ -211,6 +214,8 @@ class DeepEval(DeepEvalBackend):
             return DeepGlobalPolar
         elif "wfc" in model_output_type:
             return DeepWFC
+        elif "polaron" in model_output_type:
+            return DeepPolaron
         elif self.get_var_name() in model_output_type:
             return DeepProperty
         else:
